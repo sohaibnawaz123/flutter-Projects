@@ -1,12 +1,21 @@
+import 'dart:io';
+
 void main() {
-  int maths = 95;
-  int english = 85;
-  int chemistry = 75;
-  int physics = 90;
-  int computer = 80;
+  print("Enter Student Name : ");
+  String? name = stdin.readLineSync();
+  print("Enter Maths Marks : ");
+  int? maths = int.parse(stdin.readLineSync()!);
+  print("Enter English Marks : ");
+  int? english = int.parse(stdin.readLineSync()!);
+  print("Enter Chemistry Marks : ");
+  int? chemistry = int.parse(stdin.readLineSync()!);
+  print("Enter Physics Marks : ");
+  int? physics = int.parse(stdin.readLineSync()!);
+  print("Enter Computer Marks : ");
+  int? computer = int.parse(stdin.readLineSync()!);
   num sum = maths + english + chemistry + physics + computer;
   double percentage = (sum / 500) * 100;
-  print("\n\nName : Sohaib Nawaz \t Roll Number : xxxxxx\n");
+  print("\n\nName : $name \t Roll Number : xxxxxx\n");
   print("\t   Mark Sheet ");
   print("==================================");
   print("= 01) Marks Of Maths     : $maths    =");
@@ -17,8 +26,6 @@ void main() {
   print("----------------------------------");
   print("= Total Marks Obtain     : $sum   =");
   print("= Percentage             : $percentage  =");
-  print("----------------------------------");
-  print("Round Of Percentage ");
-  print(percentage.toStringAsFixed(2));
+  print("----------------------------------\n");
   print("==================================");
 }
